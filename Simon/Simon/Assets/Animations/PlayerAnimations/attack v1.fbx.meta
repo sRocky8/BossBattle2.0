@@ -1,0 +1,435 @@
+fileFormatVersion: 2
+guid: 718b001056a85524ebf738c3e307b760
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: bottomCap1
+    100004: CenterHead
+    100006: CenterNeck
+    100008: CenterRoot
+    100010: CenterRoot_CenterSpine
+    100012: CenterSpine
+    100014: Dave_Ctrl_ChestEndEffector
+    100016: Dave_Ctrl_ChestOriginEffector
+    100018: Dave_Ctrl_Head
+    100020: Dave_Ctrl_HeadEffector
+    100022: Dave_Ctrl_Hips
+    100024: Dave_Ctrl_HipsEffector
+    100026: Dave_Ctrl_LeftAnkleEffector
+    100028: Dave_Ctrl_LeftArm
+    100030: Dave_Ctrl_LeftElbowEffector
+    100032: Dave_Ctrl_LeftFoot
+    100034: Dave_Ctrl_LeftFootExtraFinger1
+    100036: Dave_Ctrl_LeftFootExtraFinger2
+    100038: Dave_Ctrl_LeftFootExtraFingerEffector
+    100040: Dave_Ctrl_LeftForeArm
+    100042: Dave_Ctrl_LeftHand
+    100044: Dave_Ctrl_LeftHandIndex1
+    100046: Dave_Ctrl_LeftHandIndex2
+    100048: Dave_Ctrl_LeftHandIndex3
+    100050: Dave_Ctrl_LeftHandIndex4
+    100052: Dave_Ctrl_LeftHandIndexEffector
+    100054: Dave_Ctrl_LeftHandMiddle1
+    100056: Dave_Ctrl_LeftHandMiddle2
+    100058: Dave_Ctrl_LeftHandMiddle3
+    100060: Dave_Ctrl_LeftHandMiddle4
+    100062: Dave_Ctrl_LeftHandMiddleEffector
+    100064: Dave_Ctrl_LeftHandPinky1
+    100066: Dave_Ctrl_LeftHandPinky2
+    100068: Dave_Ctrl_LeftHandPinky3
+    100070: Dave_Ctrl_LeftHandPinky4
+    100072: Dave_Ctrl_LeftHandPinkyEffector
+    100074: Dave_Ctrl_LeftHandRing1
+    100076: Dave_Ctrl_LeftHandRing2
+    100078: Dave_Ctrl_LeftHandRing3
+    100080: Dave_Ctrl_LeftHandRing4
+    100082: Dave_Ctrl_LeftHandRingEffector
+    100084: Dave_Ctrl_LeftHandThumb1
+    100086: Dave_Ctrl_LeftHandThumb2
+    100088: Dave_Ctrl_LeftHandThumb3
+    100090: Dave_Ctrl_LeftHandThumbEffector
+    100092: Dave_Ctrl_LeftHipEffector
+    100094: Dave_Ctrl_LeftKneeEffector
+    100096: Dave_Ctrl_LeftLeg
+    100098: Dave_Ctrl_LeftShoulder
+    100100: Dave_Ctrl_LeftShoulderEffector
+    100102: Dave_Ctrl_LeftUpLeg
+    100104: Dave_Ctrl_LeftWristEffector
+    100106: Dave_Ctrl_Neck
+    100108: Dave_Ctrl_Reference
+    100110: Dave_Ctrl_RightAnkleEffector
+    100112: Dave_Ctrl_RightArm
+    100114: Dave_Ctrl_RightElbowEffector
+    100116: Dave_Ctrl_RightFoot
+    100118: Dave_Ctrl_RightFootExtraFinger1
+    100120: Dave_Ctrl_RightFootExtraFinger2
+    100122: Dave_Ctrl_RightFootExtraFingerEffector
+    100124: Dave_Ctrl_RightForeArm
+    100126: Dave_Ctrl_RightHand
+    100128: Dave_Ctrl_RightHandIndex1
+    100130: Dave_Ctrl_RightHandIndex2
+    100132: Dave_Ctrl_RightHandIndex3
+    100134: Dave_Ctrl_RightHandIndex4
+    100136: Dave_Ctrl_RightHandIndexEffector
+    100138: Dave_Ctrl_RightHandMiddle1
+    100140: Dave_Ctrl_RightHandMiddle2
+    100142: Dave_Ctrl_RightHandMiddle3
+    100144: Dave_Ctrl_RightHandMiddle4
+    100146: Dave_Ctrl_RightHandMiddleEffector
+    100148: Dave_Ctrl_RightHandPinky1
+    100150: Dave_Ctrl_RightHandPinky2
+    100152: Dave_Ctrl_RightHandPinky3
+    100154: Dave_Ctrl_RightHandPinky4
+    100156: Dave_Ctrl_RightHandPinkyEffector
+    100158: Dave_Ctrl_RightHandRing1
+    100160: Dave_Ctrl_RightHandRing2
+    100162: Dave_Ctrl_RightHandRing3
+    100164: Dave_Ctrl_RightHandRing4
+    100166: Dave_Ctrl_RightHandRingEffector
+    100168: Dave_Ctrl_RightHandThumb1
+    100170: Dave_Ctrl_RightHandThumb2
+    100172: Dave_Ctrl_RightHandThumb3
+    100174: Dave_Ctrl_RightHandThumbEffector
+    100176: Dave_Ctrl_RightHipEffector
+    100178: Dave_Ctrl_RightKneeEffector
+    100180: Dave_Ctrl_RightLeg
+    100182: Dave_Ctrl_RightShoulder
+    100184: Dave_Ctrl_RightShoulderEffector
+    100186: Dave_Ctrl_RightUpLeg
+    100188: Dave_Ctrl_RightWristEffector
+    100190: Dave_Ctrl_Spine
+    100192: Dave_Ctrl_Spine1
+    100194: humanBody
+    100196: LeftCollar
+    100198: LeftElbow
+    100200: LeftFoot
+    100202: LeftFootThumb
+    100204: LeftFootThumb 1
+    100206: LeftHand
+    100208: LeftHip
+    100210: LeftIndexFinger
+    100212: LeftIndexFinger 1
+    100214: LeftIndexFinger 2
+    100216: LeftIndexFinger 3
+    100218: LeftKnee
+    100220: LeftMiddleFinger
+    100222: LeftMiddleFinger 1
+    100224: LeftMiddleFinger 2
+    100226: LeftMiddleFinger 3
+    100228: LeftPinkyFinger
+    100230: LeftPinkyFinger 1
+    100232: LeftPinkyFinger 2
+    100234: LeftPinkyFinger 3
+    100236: LeftRingFinger
+    100238: LeftRingFinger 1
+    100240: LeftRingFinger 2
+    100242: LeftRingFinger 3
+    100244: LeftShoulder
+    100246: LeftThumb
+    100248: LeftThumb 1
+    100250: LeftThumb 2
+    100252: nurbsCylinder1
+    100254: ref
+    100256: RightCollar
+    100258: RightElbow
+    100260: RightFoot
+    100262: RightFootThumb
+    100264: RightFootThumb 1
+    100266: RightHand
+    100268: RightHip
+    100270: RightIndexFinger
+    100272: RightIndexFinger 1
+    100274: RightIndexFinger 2
+    100276: RightIndexFinger 3
+    100278: RightKnee
+    100280: RightMiddleFinger
+    100282: RightMiddleFinger 1
+    100284: RightMiddleFinger 2
+    100286: RightMiddleFinger 3
+    100288: RightPinkyFinger
+    100290: RightPinkyFinger 1
+    100292: RightPinkyFinger 2
+    100294: RightPinkyFinger 3
+    100296: RightRingFinger
+    100298: RightRingFinger 1
+    100300: RightRingFinger 2
+    100302: RightRingFinger 3
+    100304: RightShoulder
+    100306: RightThumb
+    100308: RightThumb 1
+    100310: RightThumb 2
+    100312: topCap1
+    400000: //RootNode
+    400002: bottomCap1
+    400004: CenterHead
+    400006: CenterNeck
+    400008: CenterRoot
+    400010: CenterRoot_CenterSpine
+    400012: CenterSpine
+    400014: Dave_Ctrl_ChestEndEffector
+    400016: Dave_Ctrl_ChestOriginEffector
+    400018: Dave_Ctrl_Head
+    400020: Dave_Ctrl_HeadEffector
+    400022: Dave_Ctrl_Hips
+    400024: Dave_Ctrl_HipsEffector
+    400026: Dave_Ctrl_LeftAnkleEffector
+    400028: Dave_Ctrl_LeftArm
+    400030: Dave_Ctrl_LeftElbowEffector
+    400032: Dave_Ctrl_LeftFoot
+    400034: Dave_Ctrl_LeftFootExtraFinger1
+    400036: Dave_Ctrl_LeftFootExtraFinger2
+    400038: Dave_Ctrl_LeftFootExtraFingerEffector
+    400040: Dave_Ctrl_LeftForeArm
+    400042: Dave_Ctrl_LeftHand
+    400044: Dave_Ctrl_LeftHandIndex1
+    400046: Dave_Ctrl_LeftHandIndex2
+    400048: Dave_Ctrl_LeftHandIndex3
+    400050: Dave_Ctrl_LeftHandIndex4
+    400052: Dave_Ctrl_LeftHandIndexEffector
+    400054: Dave_Ctrl_LeftHandMiddle1
+    400056: Dave_Ctrl_LeftHandMiddle2
+    400058: Dave_Ctrl_LeftHandMiddle3
+    400060: Dave_Ctrl_LeftHandMiddle4
+    400062: Dave_Ctrl_LeftHandMiddleEffector
+    400064: Dave_Ctrl_LeftHandPinky1
+    400066: Dave_Ctrl_LeftHandPinky2
+    400068: Dave_Ctrl_LeftHandPinky3
+    400070: Dave_Ctrl_LeftHandPinky4
+    400072: Dave_Ctrl_LeftHandPinkyEffector
+    400074: Dave_Ctrl_LeftHandRing1
+    400076: Dave_Ctrl_LeftHandRing2
+    400078: Dave_Ctrl_LeftHandRing3
+    400080: Dave_Ctrl_LeftHandRing4
+    400082: Dave_Ctrl_LeftHandRingEffector
+    400084: Dave_Ctrl_LeftHandThumb1
+    400086: Dave_Ctrl_LeftHandThumb2
+    400088: Dave_Ctrl_LeftHandThumb3
+    400090: Dave_Ctrl_LeftHandThumbEffector
+    400092: Dave_Ctrl_LeftHipEffector
+    400094: Dave_Ctrl_LeftKneeEffector
+    400096: Dave_Ctrl_LeftLeg
+    400098: Dave_Ctrl_LeftShoulder
+    400100: Dave_Ctrl_LeftShoulderEffector
+    400102: Dave_Ctrl_LeftUpLeg
+    400104: Dave_Ctrl_LeftWristEffector
+    400106: Dave_Ctrl_Neck
+    400108: Dave_Ctrl_Reference
+    400110: Dave_Ctrl_RightAnkleEffector
+    400112: Dave_Ctrl_RightArm
+    400114: Dave_Ctrl_RightElbowEffector
+    400116: Dave_Ctrl_RightFoot
+    400118: Dave_Ctrl_RightFootExtraFinger1
+    400120: Dave_Ctrl_RightFootExtraFinger2
+    400122: Dave_Ctrl_RightFootExtraFingerEffector
+    400124: Dave_Ctrl_RightForeArm
+    400126: Dave_Ctrl_RightHand
+    400128: Dave_Ctrl_RightHandIndex1
+    400130: Dave_Ctrl_RightHandIndex2
+    400132: Dave_Ctrl_RightHandIndex3
+    400134: Dave_Ctrl_RightHandIndex4
+    400136: Dave_Ctrl_RightHandIndexEffector
+    400138: Dave_Ctrl_RightHandMiddle1
+    400140: Dave_Ctrl_RightHandMiddle2
+    400142: Dave_Ctrl_RightHandMiddle3
+    400144: Dave_Ctrl_RightHandMiddle4
+    400146: Dave_Ctrl_RightHandMiddleEffector
+    400148: Dave_Ctrl_RightHandPinky1
+    400150: Dave_Ctrl_RightHandPinky2
+    400152: Dave_Ctrl_RightHandPinky3
+    400154: Dave_Ctrl_RightHandPinky4
+    400156: Dave_Ctrl_RightHandPinkyEffector
+    400158: Dave_Ctrl_RightHandRing1
+    400160: Dave_Ctrl_RightHandRing2
+    400162: Dave_Ctrl_RightHandRing3
+    400164: Dave_Ctrl_RightHandRing4
+    400166: Dave_Ctrl_RightHandRingEffector
+    400168: Dave_Ctrl_RightHandThumb1
+    400170: Dave_Ctrl_RightHandThumb2
+    400172: Dave_Ctrl_RightHandThumb3
+    400174: Dave_Ctrl_RightHandThumbEffector
+    400176: Dave_Ctrl_RightHipEffector
+    400178: Dave_Ctrl_RightKneeEffector
+    400180: Dave_Ctrl_RightLeg
+    400182: Dave_Ctrl_RightShoulder
+    400184: Dave_Ctrl_RightShoulderEffector
+    400186: Dave_Ctrl_RightUpLeg
+    400188: Dave_Ctrl_RightWristEffector
+    400190: Dave_Ctrl_Spine
+    400192: Dave_Ctrl_Spine1
+    400194: humanBody
+    400196: LeftCollar
+    400198: LeftElbow
+    400200: LeftFoot
+    400202: LeftFootThumb
+    400204: LeftFootThumb 1
+    400206: LeftHand
+    400208: LeftHip
+    400210: LeftIndexFinger
+    400212: LeftIndexFinger 1
+    400214: LeftIndexFinger 2
+    400216: LeftIndexFinger 3
+    400218: LeftKnee
+    400220: LeftMiddleFinger
+    400222: LeftMiddleFinger 1
+    400224: LeftMiddleFinger 2
+    400226: LeftMiddleFinger 3
+    400228: LeftPinkyFinger
+    400230: LeftPinkyFinger 1
+    400232: LeftPinkyFinger 2
+    400234: LeftPinkyFinger 3
+    400236: LeftRingFinger
+    400238: LeftRingFinger 1
+    400240: LeftRingFinger 2
+    400242: LeftRingFinger 3
+    400244: LeftShoulder
+    400246: LeftThumb
+    400248: LeftThumb 1
+    400250: LeftThumb 2
+    400252: nurbsCylinder1
+    400254: ref
+    400256: RightCollar
+    400258: RightElbow
+    400260: RightFoot
+    400262: RightFootThumb
+    400264: RightFootThumb 1
+    400266: RightHand
+    400268: RightHip
+    400270: RightIndexFinger
+    400272: RightIndexFinger 1
+    400274: RightIndexFinger 2
+    400276: RightIndexFinger 3
+    400278: RightKnee
+    400280: RightMiddleFinger
+    400282: RightMiddleFinger 1
+    400284: RightMiddleFinger 2
+    400286: RightMiddleFinger 3
+    400288: RightPinkyFinger
+    400290: RightPinkyFinger 1
+    400292: RightPinkyFinger 2
+    400294: RightPinkyFinger 3
+    400296: RightRingFinger
+    400298: RightRingFinger 1
+    400300: RightRingFinger 2
+    400302: RightRingFinger 3
+    400304: RightShoulder
+    400306: RightThumb
+    400308: RightThumb 1
+    400310: RightThumb 2
+    400312: topCap1
+    2100000: Default Material1
+    4300000: humanBody
+    7400000: Attackv1
+    9500000: //RootNode
+    13700000: humanBody
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Attackv1
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 139
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
