@@ -20,6 +20,9 @@ public class Monster : MonoBehaviour {
 
 	//Private Variables
 	private float distanceToPlayer;
+    private string sceneName;
+
+    private Scene currentScene;
 
 	private bool phaseOne;
 	private bool active;
@@ -28,19 +31,21 @@ public class Monster : MonoBehaviour {
 	void Start () {
 		agent = GetComponent<NavMeshAgent> ();
 
-		if (SceneManager.GetSceneByName == "BossPhase 1" || SceneManager.GetSceneByName == "BossPhase 2") {
-			active == true;
-		}
-		else{
-			active = false;
-		}
-
-		if (SceneManager.GetSceneByName == "BossPhase 1") {
-			phaseOne == true;
-		}
-		if (SceneManager.GetSceneByName == "BossPhase 2") {
-			phaseOne == false;
-		}
+//       currentScene.name = SceneManager.GetSceneByName();
+//
+//		if (SceneManager.GetSceneByName == "BossPhase 1" || SceneManager.GetSceneByName == "BossPhase 2") {
+//			active == true;
+//		}
+//		else{
+//			active = false;
+//		}
+//
+//		if (SceneManager.GetSceneByName == "BossPhase 1") {
+//			phaseOne == true;
+//		}
+//		if (SceneManager.GetSceneByName == "BossPhase 2") {
+//			phaseOne == false;
+//		}
 	}
 	
 	// Update is called once per frame
