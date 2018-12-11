@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -17,8 +18,13 @@ public class PlayerController : MonoBehaviour {
 	private bool inHitStun;
 	private bool attackState;
 
+    private Scene currentScene;
+
 	// Use this for initialization
 	void Start () {
+
+        currentScene = SceneManager.GetActiveScene();
+
 		maxHealth = health;
 		inHitStun = false;
 		attackState = false;
@@ -27,6 +33,13 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        DontDestroyOnLoad(this.gameObject);
+
+        if (Input.GetKeyDown(KeyCode.Equals))
+        {
+            SceneManager.LoadScene(currentScene.buildIndex + 1);
+        }
 
 		if (health > maxHealth) {
 			health = maxHealth;

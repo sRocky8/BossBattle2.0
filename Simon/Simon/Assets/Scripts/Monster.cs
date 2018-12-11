@@ -11,41 +11,44 @@ public class Monster : MonoBehaviour {
 	public Transform playerTransform;
     public GameObject player;
 
-	public float maxNonDashDistance;
-	public float maxAttackDistance;
+    public float damageFromCriticalHit;
+    public float health;
 
-	public bool attacking;
-	public bool stunned;
-	public bool inHitstun;
+    public float maxNonDashDistance;
+	public float maxAttackDistance;
 
 	//Private Variables
 	private float distanceToPlayer;
-    private string sceneName;
 
     private Scene currentScene;
+    private string currentSceneName;
 
-	private bool phaseOne;
 	private bool active;
+    private bool attacking;
+    private bool inHitstun;
+    private bool phaseOne;
+    private bool stunned;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		agent = GetComponent<NavMeshAgent> ();
 
-//       currentScene.name = SceneManager.GetSceneByName();
-//
-//		if (SceneManager.GetSceneByName == "BossPhase 1" || SceneManager.GetSceneByName == "BossPhase 2") {
-//			active == true;
-//		}
-//		else{
-//			active = false;
-//		}
-//
-//		if (SceneManager.GetSceneByName == "BossPhase 1") {
-//			phaseOne == true;
-//		}
-//		if (SceneManager.GetSceneByName == "BossPhase 2") {
-//			phaseOne == false;
-//		}
+        currentScene = SceneManager.GetActiveScene();
+        currentSceneName = currentScene.name;
+
+		if (currentSceneName == "BossPhase 1" || currentSceneName == "BossPhase 2") {
+            active = true;
+		}
+		else{
+			active = false;
+		}
+
+		if (currentSceneName == "BossPhase 1" && active == true) {
+			phaseOne = true;
+		}
+		if (currentSceneName == "BossPhase 2" && active == true) {
+			phaseOne = false;
+		}
 	}
 	
 	// Update is called once per frame
