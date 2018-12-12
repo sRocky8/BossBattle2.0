@@ -18,12 +18,12 @@ public class PlayerController : MonoBehaviour {
 	private bool inHitStun;
 	private bool attackState;
 
-    private Scene currentScene;
+    private int currentScene;
 
 	// Use this for initialization
 	void Start () {
 
-        currentScene = SceneManager.GetActiveScene();
+		currentScene = SceneManager.GetActiveScene().buildIndex;
 
 		maxHealth = health;
 		inHitStun = false;
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Equals))
         {
-            SceneManager.LoadScene(currentScene.buildIndex + 1);
+            SceneManager.LoadScene(currentScene + 1);
         }
 
 		if (health > maxHealth) {
