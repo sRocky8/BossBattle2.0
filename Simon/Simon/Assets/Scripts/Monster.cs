@@ -20,6 +20,7 @@ public class Monster : MonoBehaviour {
 	public float secondsForDash;
 	public float secondsForAttack;
 	public float dashSpeed;
+    public float attackCooldownSeconds;
 
 	//Private Variables
 	private float distanceToPlayer;
@@ -36,6 +37,7 @@ public class Monster : MonoBehaviour {
     private bool inHitstun;
     private bool phaseOne;
     private bool stunned;
+    private bool canAttack;
 
 	private bool seesGap;
 	private bool seesPlayer;
@@ -99,7 +101,7 @@ public class Monster : MonoBehaviour {
 
 	void FixedUpdate(){
 		if (distanceToPlayer <= maxNonDashDistance) {
-			if (attacking == false) {
+			if (attacking == false && canAttack == true) {
 				Vector3 walkTo = playerTransform.transform.position;
 				agent.destination = walkTo;
 			}
@@ -124,21 +126,27 @@ public class Monster : MonoBehaviour {
 
 		agent.enabled = true;
 		attacking = false;
+        StartCoroutine(AttackCooldownCoRoutine());
 	}
 
 	private IEnumerator AttackCoRoutine(){
 		attacking = true;
 		agent.enabled = false;
-		monsterAnimator.Play ("Attack 1");
+		monsterAnimator.Play ("Attack");
 		Debug.Log ("Played AttackCoRoutine");
 
 		yield return new WaitForSeconds (secondsForAttack);
 
 		agent.enabled = true;
 		attacking = false;
+        StartCoroutine(AttackCooldownCoRoutine());
 	}
 
-//	private IEnumerator WaitToAttackCoRoutine(){
+	private IEnumerator AttackCooldownCoRoutine(){
+        canAttack = false;
 
-//	}
+        yield return new WaitForSeconds(attackCooldownSeconds);
+
+        canAttack = true;
+	}
 }

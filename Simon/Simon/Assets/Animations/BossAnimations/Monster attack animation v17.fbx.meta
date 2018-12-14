@@ -58,7 +58,7 @@ ModelImporter:
     2000000: persp1
     2100000: Default Material3
     4300000: humanBody
-    7400000: Attack 1
+    7400000: Attack
     9500000: //RootNode
     13700000: humanBody
   externalObjects:
@@ -95,7 +95,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Attack 1
+      name: Attack
       takeName: Take 001
       firstFrame: 1
       lastFrame: 106
