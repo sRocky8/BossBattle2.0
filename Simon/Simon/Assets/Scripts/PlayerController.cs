@@ -17,27 +17,46 @@ public class PlayerController : MonoBehaviour {
 	private float maxHealth;
 	private bool inHitStun;
 	private bool attackState;
+    private bool moveableScene;
 
     private int currentScene;
+
+    private GameObject playerCamera;
 
 	// Use this for initialization
 	void Start () {
 
-		currentScene = SceneManager.GetActiveScene().buildIndex;
+//		currentScene = SceneManager.GetActiveScene().buildIndex;
 
 		maxHealth = health;
 		inHitStun = false;
 		attackState = false;
 		playerAnimation = GetComponent<Animator> ();
-	}
+        playerCamera = gameObject.transform.Find("Main Camera").gameObject;
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
-        DontDestroyOnLoad(this.gameObject);
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+
+        if (currentScene != 7)
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
+
+        if ((currentScene == 2 || currentScene == 4) || (currentScene == 6 || currentScene == 7))
+        {
+            playerCamera.SetActive(false);
+        }
+        else if ((currentScene == 1 || currentScene == 3) || currentScene == 5)
+        {
+            playerCamera.SetActive(true);
+        }
 
         if (Input.GetKeyDown(KeyCode.Equals))
         {
+//            currentScene += 1;
             SceneManager.LoadScene(currentScene + 1);
         }
 
