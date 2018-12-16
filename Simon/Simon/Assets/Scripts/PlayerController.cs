@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour {
 
 	private IEnumerator AttackMonsterCoRoutine(){
 		attackState = true;
-		playerAnimation.Play ("Attackv1");
+		playerAnimation.Play ("Attackv2");
 
 		yield return new WaitForSeconds (139.0f/60.0f);
 
