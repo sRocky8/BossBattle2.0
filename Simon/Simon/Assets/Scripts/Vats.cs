@@ -21,6 +21,7 @@ public class Vats : MonoBehaviour {
 	void Start () {
         switchOneActive = false;
         switchTwoActive = false;
+        sound.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -48,7 +49,7 @@ public class Vats : MonoBehaviour {
     }
 	void OnTriggerEnter(Collider other){
 		if (sound != null) {
-			if (other.tag == "WeaponVat" && lerpPosition == 1) {
+			if (other.tag == "WeaponVat" && lerpPosition >= 1) {
 				StartCoroutine (SoundActiveCoRoutine ());
 			}
 		}
@@ -57,7 +58,7 @@ public class Vats : MonoBehaviour {
 	private IEnumerator SoundActiveCoRoutine(){
 		sound.SetActive (true);
 
-		yield return new WaitForSeconds (1.0f / 60.0f);
+		yield return new WaitForSeconds (30.0f / 60.0f);
 
 		sound.SetActive (false);
 	}

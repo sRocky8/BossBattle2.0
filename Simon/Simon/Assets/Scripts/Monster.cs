@@ -48,6 +48,8 @@ public class Monster : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        player = GameObject.Find("PlayerV1");
+        playerTransform = player.transform;
 
         agent = GetComponent<NavMeshAgent> ();
 		monsterAnimator = GetComponent<Animator> ();
@@ -107,7 +109,10 @@ public class Monster : MonoBehaviour {
 			seesGap = false;
 		}
 
-
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(currentScene.buildIndex + 1);
+        }
 	}
 
 	void FixedUpdate(){
@@ -138,7 +143,13 @@ public class Monster : MonoBehaviour {
 
             StartCoroutine(CriticallyHitCoRoutine());
         }
+
+        if(other.tag == "Bang")
+        {
+            StartCoroutine(StunnedCoRoutine());
+        }
     }
+
 
     private IEnumerator DashCoRoutine(){
 		attacking = true;
