@@ -11,6 +11,7 @@ TagManager:
   - WeaponVat
   - WeaponMonster
   - MainLever
+  - Bang
   layers:
   - Default
   - TransparentFX

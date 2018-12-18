@@ -115,21 +115,24 @@ public class Monster : MonoBehaviour {
 			if (attacking == false && canAttack == true) {
 				Vector3 walkTo = playerTransform.transform.position;
 				agent.destination = walkTo;
+				Debug.Log ("walking to player");
 			}
 		}
 		if (seesPlayer == true && seesGap == false) {
-			if (distanceToPlayer > maxNonDashDistance && attacking == false) {
-				StartCoroutine (DashCoRoutine ());
-			}
-			if (distanceToPlayer <= maxAttackDistance && attacking == false) {
-				StartCoroutine (AttackCoRoutine ());
+			if (inHitstun == false && stunned == false) {
+				if (distanceToPlayer > maxNonDashDistance && attacking == false) {
+					StartCoroutine (DashCoRoutine ());
+				}
+				if (distanceToPlayer <= maxAttackDistance && attacking == false) {
+					StartCoroutine (AttackCoRoutine ());
+				}
 			}
 		}
 	}
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "WeaponMonster")
+		if(other.tag == "WeaponMonster" && stunned == true)
         {
             health -= 1.0f;
 
@@ -173,11 +176,25 @@ public class Monster : MonoBehaviour {
 
     private IEnumerator CriticallyHitCoRoutine()
     {
+		StopCoroutine (StunnedCoRoutine ());
+		monsterAnimator.StopPlayback ();
+		stunned = false;
+		agent.enabled = false;
         inHitstun = true;
         monsterAnimator.Play("CriticallyHit");
 
         yield return new WaitForSeconds(criticallyHitSeconds);
 
         inHitstun = false;
+		agent.enabled = true;
     }
+
+	private IEnumerator StunnedCoRoutine(){
+		agent.enabled = false;
+		stunned = true;
+		monsterAnimator.Play ("Stunned");
+		yield return new WaitForSeconds (10.0f);
+		stunned = false;
+		agent.enabled = true;
+	}
 }

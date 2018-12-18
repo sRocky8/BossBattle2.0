@@ -7,6 +7,7 @@ public class Vats : MonoBehaviour {
     //Public Variables
     public GameObject switchOne;
     public GameObject switchTwo;
+	public GameObject sound;
     public Vector3 maxHeight;
     public Vector3 minHeight;
     public float lerpPosition;
@@ -41,5 +42,23 @@ public class Vats : MonoBehaviour {
 				lerpPosition -= 1.0f / translationValue;
 			}
         }
+
+
+
     }
+	void OnTriggerEnter(Collider other){
+		if (sound != null) {
+			if (other.tag == "WeaponVat" && lerpPosition == 1) {
+				StartCoroutine (SoundActiveCoRoutine ());
+			}
+		}
+	}
+
+	private IEnumerator SoundActiveCoRoutine(){
+		sound.SetActive (true);
+
+		yield return new WaitForSeconds (1.0f / 60.0f);
+
+		sound.SetActive (false);
+	}
 }
