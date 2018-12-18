@@ -40,7 +40,7 @@ public class Switches : MonoBehaviour {
 
     public void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player" && Input.GetKeyDown(KeyCode.U))
+        if (other.tag == "Player" && Input.GetKeyDown(KeyCode.E))
         {
             activated = true;
         }

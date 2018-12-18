@@ -21,9 +21,10 @@ public class Monster : MonoBehaviour {
 	public float secondsForAttack;
 	public float dashSpeed;
     public float attackCooldownSeconds;
+    public float criticallyHitSeconds;
 
-	//Private Variables
-	private float distanceToPlayer;
+    //Private Variables
+    private float distanceToPlayer;
 
 	private Animator monsterAnimator;
 
@@ -47,7 +48,8 @@ public class Monster : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		agent = GetComponent<NavMeshAgent> ();
+
+        agent = GetComponent<NavMeshAgent> ();
 		monsterAnimator = GetComponent<Animator> ();
 
         currentScene = SceneManager.GetActiveScene();
@@ -68,6 +70,9 @@ public class Monster : MonoBehaviour {
 			phaseOne = false;
 			GetComponent<NavMeshAgent> ().speed = 3.0f;
 		}
+
+        leftArm.SetActive(false);
+        rightArm.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -77,6 +82,12 @@ public class Monster : MonoBehaviour {
             distanceToPlayer = Vector3.Distance(player.transform.position, gameObject.transform.position);
 //            Debug.Log(string.Format("Distance between player and monster is {0}", distanceToPlayer));
         }
+
+        if(currentSceneName == "Cutscene 3")
+        {
+            monsterAnimator.SetBool("CutScene3", true);
+        }
+
 
 		//Check if monster has direct line of sight to player
 		RaycastHit hitPlayer;
@@ -116,7 +127,17 @@ public class Monster : MonoBehaviour {
 		}
 	}
 
-	private IEnumerator DashCoRoutine(){
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "WeaponMonster")
+        {
+            health -= 1.0f;
+
+            StartCoroutine(CriticallyHitCoRoutine());
+        }
+    }
+
+    private IEnumerator DashCoRoutine(){
 		attacking = true;
 		agent.enabled = false;
 //		monsterAnimator.Play ("DashAttack");
@@ -149,4 +170,14 @@ public class Monster : MonoBehaviour {
 
         canAttack = true;
 	}
+
+    private IEnumerator CriticallyHitCoRoutine()
+    {
+        inHitstun = true;
+        monsterAnimator.Play("CriticallyHit");
+
+        yield return new WaitForSeconds(criticallyHitSeconds);
+
+        inHitstun = false;
+    }
 }

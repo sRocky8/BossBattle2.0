@@ -64,7 +64,7 @@ public class MainVat : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         if (currentSceneName == "BossFight") {
-            if (other.tag == "Weapon")
+            if (other.tag == "WeaponVat")
             {
                 StartCoroutine(TransitionCoRoutine());
             }

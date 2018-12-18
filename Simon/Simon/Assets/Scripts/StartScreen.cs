@@ -24,6 +24,7 @@ public class StartScreen : MonoBehaviour {
 //        musicAudio = music.GetComponent<AudioSource>();
         buttonClicked = false;
 //        volumeDecrease = (1.0f / 300.0f);
+        Destroy(GameObject.Find("PlayerV1"));
     }
 
     void Update()
